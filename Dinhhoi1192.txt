@@ -5,3 +5,5 @@ minh 1
 minh 1
 
 minh 2
+
+them 1 lan dau
