@@ -1,3 +1,7 @@
 Test
+<<<<<<< .mine
 minh 1
+=======
+minh 1
+>>>>>>> .theirs
 minh 2
