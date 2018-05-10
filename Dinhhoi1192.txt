@@ -1,11 +1,4 @@
 Test
 minh 1
-hoi 2
 
-minh 1
 
-minh 1
-minh 2
-them lan 5
-lan6
-lan8
