@@ -1,4 +1,12 @@
 Test
+<<<<<<< HEAD
 minh 1
 hoi 2
+=======
+
+minh 1
+
+minh 1
+
+>>>>>>> 828b253e0569c3008715db100427fd43e51e0a37
 minh 2
