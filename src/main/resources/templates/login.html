@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Login Page</title>
+<style type="text/css">
+.main-content {
+	margin: 100px auto;
+	max-width: 300px;
+}
+
+.success {
+	color: green;
+}
+
+.error {
+	color: red;
+}
+
+.field-error {
+	border: 1px solid red;
+}
+
+input {
+	margin-bottom: 5px;
+}
+
+em {
+	color: red;
+	display: block;
+	font-size: 14px;
+	margin-bottom: 5px;
+}
+</style>
+</head>
+<body>
+	<div class="main-content">
+		<p th:if="${param.error}" class="error">Invalid email or password</p>
+		<p th:if="${param.logout}" class="success">You have been logged
+			out</p>
+
+
+		<h1>Login to continue</h1>
+
+		<form th:action="@{/login}" method="POST">
+			<input type="text" name="email" placeholder="Your email" /> <b /> <input
+				type="password" name="password" placeholder="Your password" /><br />
+			<p>
+				<button type="submit">Login</button>
+			</p>
+		</form>
+</body>
+</html>

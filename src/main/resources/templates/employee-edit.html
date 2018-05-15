@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<style>
+table, th, td{
+	margin: auto;
+
+}
+h1{
+	margin: auto;
+	text-align: center;
+}
+</style>
+<body>
+	<button type="button" onclick = "location.href='/employeesadmin'">List Employee</button>
+
+<h1>Edit Employee</h1>
+	<form  action="/editEmployee" method="GET">
+		<table>
+
+			<tr>
+				<td>Id:</td>
+				<td><input type='text' th:modelAttribute="name" name='id' th:value="${employee.id}"></td>
+			</tr>
+			<tr>
+				<td>Name:</td>
+				<td><input type='text' name='name' th:value="${employee.name}"></td>
+			</tr>
+
+			<tr>
+				<td>Birthday:</td>
+				<td><input type='text' name='birthday' th:value='${employee.birthday}'></td>
+			</tr>
+
+			<tr>
+				<td>Sex:</td>
+				<td><input type='text' name='sex' th:value='${employee.sex}'/></td>
+			</tr>
+			<tr>
+				<td>Insurance:</td>
+				<td><input type='text' name='insurance' th:value='${employee.insurance}'/></td>
+			</tr>
+			<tr>
+				<td>Address:</td>
+				<td><input type='text' name='address' th:value='${employee.address}'/></td>
+			</tr>
+			<tr>
+				<td>Phone:</td>
+				<td><input type='text' name='phone' th:value='${employee.phone}'/></td>
+			</tr>
+			<tr>
+				<td>level:</td>
+				<td><input type='text' name='level' th:value='${employee.level}'/></td>
+			</tr>
+			<tr>
+				<td><input name="editEmployee" type="submit" value="Save" /></td>
+				
+			</tr>
+		</table>
+	</form>
+
+</body>
+
+</html>

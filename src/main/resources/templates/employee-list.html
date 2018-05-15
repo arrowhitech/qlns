@@ -1,0 +1,81 @@
+
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Users List</title>
+</head>
+
+<style>
+
+table, th, td{
+	border: 1px solid black;
+	border-collapse: collapse;
+
+}
+td{
+	text-align: center;
+}
+
+th {
+	text-align: center;
+}
+
+
+
+h1 {
+	margin: auto;
+	text-align: center;
+}
+
+
+</style>
+
+
+<body>
+
+
+<form method="GET" action=""  name="">
+
+	
+	<button type="button" onclick = "location.href='/employeeAdd'">add</button>
+	
+	
+</form>
+  
+ 
+<div class="employeelist">
+<h1>Employee List</h1>
+	<table style="margin: auto;
+	width: 80%;">
+		<tr>
+			<th>Id</th>
+			<th>Name</th>
+			<th>Birthday</th>
+			<th>Sex</th>
+			<th>Insurance</th>
+			<th>Address</th>
+			<th>Phone</th>
+			<th>level</th>
+			<th>Delete</th>
+			<th>Edit</th>
+		</tr>
+		<tr th:each="employee : ${employeeList}">
+			<td th:text="${employee.id}">ID</td>
+			<td th:text="${employee.name}">Name</td>
+			<td pattern="yyyy-MM-dd" th:text="${employee.birthday}">Birthday</td>
+			<td th:text="${employee.sex}==1?nam:nu">Sex</td>
+			<td th:text="${employee.insurance}">Insurance</td>
+			<td th:text="${employee.address}">Address</td>
+			<td th:text="${employee.phone}">Phone</td>
+			<td th:text="${employee.level}">level</td>
+
+			<td><a th:href="@{/employeesadmin/delete/}+${employee.id}">Delete</a></td>
+			<td><a th:href="@{/employeesadmin/edit/}+${employee.id}">Edit</button></td>
+		</tr>
+	</table>
+</div>
+
+
+</body>
+</html>
