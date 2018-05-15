@@ -1,7 +1,0 @@
-minh 1
-
-L?p UserDetailsServiceImpl s? ph?i ghi dè phuong th?c loadByUsername(String username) c?a UserDetailsService.
-Tham s? username ? dây ta c?n ph?i hi?u là email mà ngu?i dùng nh?p vào. Mình s? tìm ki?m trong CSDL
-user th?a mãn username này.
-N?u nhu không tìm th?y, s? throw new UsernameNotFoundException("User not found");
-hoi 1
